@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="presentacion.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <form runat="server">
+        <div class="container">
+            <section class="main row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+
+                <div class="list-group">
+    <a class="list-group-item list-group-item-action">Administracion</a>  
+        <a href="/registro_alumno" class="list-group-item list-group-item-action list-group-item-primary">Registrar Personas</a>
+        <a href="/registrocurso" class="list-group-item list-group-item-action list-group-item-primary">Registrar cursos</a>
+        <a href="/Asingacionestudiante" class="list-group-item list-group-item-action list-group-item-primary">Asignar cursos</a>
+        <a href="/Vista_Reporte" class="list-group-item list-group-item-action list-group-item-primary">Reporte</a>
+    </div>      
+                <br />
+                <br />
+                <br />                
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-9 col-lg-10">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+                </section>
+       </div>
+
+    </form>
+</body>
+</html>
